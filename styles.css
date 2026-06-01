@@ -360,3 +360,292 @@ header{
     width: 32px;
     background: #111112;
 }
+
+
+
+
+.last-section {    
+    display: flex;
+    flex-wrap: wrap;
+    background:linear-gradient(90deg, #2E0797 0%, #726EFC 100%);    
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-radius: 24px;
+    padding: 3rem 3rem 0 3rem; 
+
+    position: relative;
+    z-index: 10;
+    margin-bottom: -150px; 
+}
+
+.cta-text > h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+    padding-bottom: 3rem;
+    color: white;
+}
+
+.footer-cta-banner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 3rem;
+    min-width: 280px;
+}
+
+.footer-cta-banner-right {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer-cta-banner-right img {
+    max-height: 350px;
+    width: auto;
+    display: block;
+}
+
+.cta-form {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    width: 100%;
+}
+
+.cta-form input {
+    padding: 1rem 12rem 1rem 2rem;
+    height: 4rem;
+    width: 100%;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.subscribeBtn {
+    position: absolute;
+    top: 50%;
+    right: 6px; 
+    transform: translateY(-50%); 
+    z-index: 2;
+}
+
+.subscribeBtn button.contact.subscribe {
+    height: calc(4rem - 12px); 
+    margin: 0 !important; 
+    padding: 0 0.5rem 0 1.5rem; 
+    white-space: nowrap; 
+    display: inline-flex;
+    align-items: center;
+}
+
+
+
+
+.site-footer {
+    background-color: #F6F6F9; 
+    width: 100%;
+
+    padding: 15rem 10% 4rem 10%; 
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.brand-col p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #2E0797;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #2E0797;
+    color: #fff;
+}
+
+.footer-col h3 {
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.links-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.links-col ul li a {
+    color: rgba(22, 22, 22, 0.7);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.links-col ul li a:hover {
+    color: #726EFC;
+}
+
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    max-width: 240px;
+}
+
+.insta-item {
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #222;
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.bottom-footer {
+    background-color: #F6F6F9;
+    border-top: 1px solid #DDDEE1;
+    width: 100%;
+    padding: 24px 0;
+}
+
+.bottom-footer-container {
+    width: 80%; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+@media (max-width: 1200px) {
+    .site-footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .bottom-footer-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .site-footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .last-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3rem 1.5rem 0 1.5rem;
+        margin-bottom: -100px;
+    }
+    
+    .footer-cta-banner-left {
+        align-items: center;
+    }
+
+    .cta-text > h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .site-footer {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 3rem;
+        padding-top: 160px; /* Mobile responsive overlap adjustments */
+    }
+
+    .bottom-footer-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-form input {
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .site-footer{
+    
+    width:100%;
+    }
+    
+    
+    .subscribeBtn {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .subscribeBtn button.contact.subscribe {
+        width: 100%;
+        justify-content: center;
+        border-radius: 10px;
+        height: 3.5rem;
+    }
+}
+
+/* ye jo footer mein aik icon hwa mein ur rha he uske liye use kia he  */
+.shape3.sh{
+    right:400px;
+    top:100px
+}
