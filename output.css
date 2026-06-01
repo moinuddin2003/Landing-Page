@@ -999,7 +999,10 @@ video {
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  /* Yeh right side par faltu scroll aane se rokega */
   font-family: "Figtree", sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -1062,12 +1065,20 @@ header{
 }
 
 @media (max-width:768px){
-  .sections-nav > ul{
-    display: none
+  .navbar {
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    /* Screen ke andar constrain rakhne ke liye */
   }
 
-  .right-nav > .contact{
-    display: none;
+  .sections-nav > ul {
+    display: none !important;
+    /* Mobile par menu list lazmi chup jaye */
+  }
+
+  .right-nav > .contact {
+    display: none !important;
   }
 }
 
@@ -1164,8 +1175,51 @@ header{
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  margin: 1rem 2rem;
+  margin-bottom:3rem;
   padding: 10rem 2rem 4rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    padding: 8rem 1rem 4rem 1rem;
+    margin: 0 auto;
+    margin-bottom:3rem;
+    width: 100%;
+  }
+
+  .left-main > h1 {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+  }
+
+  .left-main > p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .stats-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .stats-section > .stat-item {
+    padding-right: 0;
+    border-right: none;
+    margin-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+  }
+
+  .right-main {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .heroSection, .hero-img, .hero-img img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .left-main {
@@ -1363,8 +1417,9 @@ header{
 .last-section {
   display: flex;
   flex-wrap: wrap;
-  background:linear-gradient(90deg, #2E0797 0%, #726EFC 100%);
-  width: 80%;
+  background: linear-gradient(90deg, #2E0797 0%, #726EFC 100%);
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
   justify-content: space-between;
   border-radius: 24px;
@@ -1372,14 +1427,10 @@ header{
   position: relative;
   z-index: 10;
   margin-bottom: -150px;
-}
-
-.cta-text > h2 {
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 3.5rem;
-  padding-bottom: 3rem;
-  color: white;
+  margin-top: 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* Elements ko boundary se bahar nikalne se rokega */
 }
 
 .footer-cta-banner-left {
@@ -1388,18 +1439,17 @@ header{
   justify-content: center;
   align-items: flex-start;
   padding-bottom: 3rem;
+  flex: 1;
   min-width: 280px;
 }
 
-.footer-cta-banner-right {
-  display: flex;
-  align-items: flex-end;
-}
-
-.footer-cta-banner-right img {
-  max-height: 350px;
-  width: auto;
-  display: block;
+.cta-text > h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3.5rem;
+  padding-bottom: 2rem;
+  color: white;
+  margin: 0;
 }
 
 .cta-form {
@@ -1410,13 +1460,15 @@ header{
 }
 
 .cta-form input {
-  padding: 1rem 12rem 1rem 2rem;
+  padding: 1rem 11rem 1rem 1.5rem;
+  /* Padding balanced for internal button */
   height: 4rem;
   width: 100%;
   border-radius: 3rem;
   border: none;
   outline: none;
   box-sizing: border-box;
+  font-size: 1rem;
 }
 
 .subscribeBtn {
@@ -1430,16 +1482,47 @@ header{
 .subscribeBtn button.contact.subscribe {
   height: calc(4rem - 12px);
   margin: 0 !important;
-  padding: 0 0.5rem 0 1.5rem;
+  padding: 0 1.5rem;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
+  border-radius: 3rem;
+  border: none;
+  background-color: #2E0797;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.footer-cta-banner-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+}
+
+.footer-cta-banner-right img {
+  max-height: 320px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.shape3.sh {
+  position: absolute;
+  right: 90%;
+  top: 20%;
+  z-index: 1;
 }
 
 .site-footer {
   background-color: #F6F6F9;
   width: 100%;
-  padding: 15rem 10% 4rem 10%;
+  padding: 240px 10% 4rem 10%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
@@ -1538,6 +1621,10 @@ header{
   display: block;
 }
 
+/* ==========================================================================
+   BOTTOM FOOTER
+   ========================================================================== */
+
 .bottom-footer {
   background-color: #F6F6F9;
   border-top: 1px solid #DDDEE1;
@@ -1551,7 +1638,12 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
+
+/* ==========================================================================
+   MEDIA QUERIES (BREAKPOINT BREAKDOWN FOR RESPONSIVENESS)
+   ========================================================================== */
 
 @media (max-width: 1200px) {
   .site-footer {
@@ -1567,33 +1659,49 @@ header{
 @media (max-width: 992px) {
   .site-footer {
     grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .cta-text > h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
 
 @media (max-width: 768px) {
   .last-section {
+    width: 92%;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 3rem 1.5rem 0 1.5rem;
-    margin-bottom: -100px;
+    margin-bottom: -180px;
+    /* Shift handle for tablet stacking */
   }
 
   .footer-cta-banner-left {
     align-items: center;
+    width: 100%;
+    padding-bottom: 2rem;
   }
 
   .cta-text > h2 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
     padding-bottom: 1.5rem;
+  }
+
+  .footer-cta-banner-right {
+    width: 100%;
+  }
+
+  .footer-cta-banner-right img {
+    max-height: 280px;
   }
 
   .site-footer {
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    padding-top: 160px;
-    /* Mobile responsive overlap adjustments */
+    padding-top: 240px;
   }
 
   .bottom-footer-container {
@@ -1601,40 +1709,67 @@ header{
     gap: 12px;
     text-align: center;
   }
+
+  .shape3.sh{
+    display:none;
+  }
 }
 
-@media (max-width: 480px) {
-  .cta-form input {
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
+@media (max-width: 520px) {
+  .site-footer {
+    /* 2 Columns grid strictly for layout management */
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 280px;
+    gap: 2.5rem 1.5rem;
   }
 
-  .site-footer{
-    width:100%;
+  /* Brand content aur Instagram content full row lelein (1 col stack) */
+
+  .footer-col.brand-col,
+    .footer-col.insta-col {
+    grid-column: span 2;
+  }
+
+  /* Dono Links-col ab half width lekar ek hi row mein side-by-side ayenge */
+
+  .footer-col.links-col {
+    grid-column: span 1;
+  }
+
+  .last-section {
+    margin-bottom: -240px;
+  }
+
+  /* Transform relative layout for smaller inputs */
+
+  .cta-form input {
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    height: 3.5rem;
   }
 
   .subscribeBtn {
     position: static;
     transform: none;
-    margin-top: 10px;
+    margin-top: 12px;
     width: 100%;
   }
 
   .subscribeBtn button.contact.subscribe {
     width: 100%;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 12px;
     height: 3.5rem;
+  }
+
+  .insta-grid {
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* ye jo footer mein aik icon hwa mein ur rha he uske liye use kia he  */
-
-.shape3.sh{
-  right:400px;
-  top:100px
-}
 
 .before\:absolute::before {
   content: var(--tw-content);
