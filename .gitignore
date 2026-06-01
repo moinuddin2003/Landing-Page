@@ -1,0 +1,15 @@
+# Dependency folder (Sab se heavy aur zaroori cheez jisko ignore karna hai)
+node_modules/
+
+# Production builds / generated CSS (Agar aap direct output.css ko update nahi kar rahe aur build chala rahe hain)
+.cssmap
+.map
+
+# Operating System files ( फालतू system files jo auto-generate hoti hain)
+.DS_Store
+Thumbs.db
+
+.output.css/
+
+npx tailwindcss -i ./styles.css -o ./output.css --watch 
+command to run tailwind cli
