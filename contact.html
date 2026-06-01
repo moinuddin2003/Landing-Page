@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Otech</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet" />
-    
-    <link rel="stylesheet" href="output.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Otech</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="output.css" />
 </head>
+
 <body>
-<div class="home-hero-wrapper">
+  <div class="home-hero-wrapper">
     <header>
       <nav class="navbar">
         <div class="left-nav">
@@ -28,9 +30,7 @@
           </ul>
         </div>
         <div class="right-nav">
-          <a href="contact.html" class="contact"
-            >GET STARTED <span><i class="fa-solid fa-arrow-right"></i></span
-          ></a>
+          <a href="contact.html" class="contact">GET STARTED <span><i class="fa-solid fa-arrow-right"></i></span></a>
 
           <button type="button">
             <i class="fa-solid fa-bars"></i>
@@ -38,37 +38,139 @@
         </div>
       </nav>
     </header>
+    <section
+      class="section1 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 m-4 pt-40 pr-8 pl-8 pb-16 relative overflow-hidden">
+      <div class="left-side flex flex-col items-start justify-center">
+        <h1 class="text-white text-6xl font-semibold">Contact Us</h1>
+        <div class="list text-white text-lg">
+          <span><a href="index.html">Home</a></span>
+          <span>
+            <i class="fa-solid fa-angle-right"></i>
+          </span>
+          <span class="active"><a href="#">Contact Us</a></span>
+        </div>
+      </div>
+      <div class="right-side relative w-full max-w-md h-40 ml-auto">
+        <div class="shapes">
+          <div class="shape3 -left-24">
+            <img src="./assets/emoji-4.3.svg" alt="" srcset="">
+          </div>
+          <div class="shape2 !-right-16">
+            <img src="./assets/emoji-4.2.svg" alt="" srcset="">
+          </div>
+        </div>
+        <div class="fan absolute inset-0 flex items-center justify-center z-0">
+          <img src="./assets/fan.svg" class="" alt="" srcset="">
+        </div>
+        <div class="hero relative bottom-24 z-10 w-[280px] md:w-[400px] ml-auto">
+          <img src="./assets/img1.webp" alt="" srcset="">
+        </div>
+      </div>
+    </section>
 
-    <main class="">
-<section class="section1 grid grid-cols-1   md:grid-cols-2 gap-8 md:gap-16 m-4 pt-40 pr-8 pl-8 pb-16 relative overflow-hidden">
-            <div class="left-side flex flex-col items-start justify-center">
-            <h1 class="text-white text-6xl font-semibold">Contact Us</h1>
-            <div class="list text-white text-lg">
-              <span><a href="index.html">Home</a></span>
-              <span>
-                <i class="fa-solid fa-angle-right"></i>
-              </span>
-              <span class="active"><a href="#">Contact Us</a></span>
-            </div>
-          </div>
-          <div class="right-side relative w-full max-w-md h-40 ml-auto">
-            <div class="shapes">
-              <div class="shape3 -left-24">
-                  <img src="./assets/emoji-4.3.svg" alt="" srcset="">
-              </div>
-              <div class="shape2 !-right-16">
-                <img src="./assets/emoji-4.2.svg" alt="" srcset="">
-              </div>
-            </div>
-            <div class="fan absolute inset-0 flex items-center justify-center z-0">
-              <img src="./assets/fan.svg" class="" alt="" srcset="">
-            </div>
-            <div class="hero relative bottom-24 z-10 w-[280px] md:w-[400px] ml-auto">
-            <img src="./assets/img1.webp" alt="" srcset="">
-            </div>
-          </div>
-        </section>  
-    </main>
   </div>
+  <main>
+
+<section class="contact-form-section bg-white py-16 pt-24 pb-20 px-4 md:px-4 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+    
+    <div class="form-container bg-gray-50 p-8 rounded-2xl shadow-sm">
+      <h2 class="text-2xl font-bold text-gray-900 pb-5 m-0">Send us a Message</h2>
+      <p class="text-gray-500 pb-8 text-lg ">Have questions or need assistance? We're here to help! Whether you're exploring solutions, looking for a consultation, or need.</p>
+      
+      <form action="#" method="POST" class="space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+          <input type="text" placeholder="First Name" class="w-full placeholder-slate-800 p-3 border border-gray-200 rounded-lg focus:outline-none focus:border-purple-500" required>
+          <input type="text" placeholder="Last Name" class="w-full p-3 border placeholder-slate-800 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500" required>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+          <input type="email" placeholder="Email" class="w-full p-3 border placeholder-slate-800 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500" required>
+          <input type="tel" placeholder="Number" class="w-full p-3 border placeholder-slate-800 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500">
+        </div>
+        <div>
+          <input type="text" placeholder="subject" class=" w-full p-3 border placeholder-slate-800 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500" required>
+        </div>  
+
+        <div>
+          <textarea name="message" id="message" placeholder="Message" class=" w-full p-3 border placeholder-slate-800 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500"></textarea>
+          </div> 
+          <div class="w-full flex justify-end pt-2">
+          <button type="submit" class="group relative inline-flex w-max items-center rounded-full bg-[#5038C9] py-2 pl-6 pr-2 text-base font-bold uppercase tracking-wider text-white  justify-between overflow-hidden z-10 transition-colors duration-300
+
+/* 1. Black layer (Hidden by default using scale-x-0) */
+before:absolute before:content-[''] before:inset-0 before:bg-[#111112] before:z-[-1] before:scale-x-0 before:origin-center before:transition-transform before:duration-300
+
+/* 2. Hover state to trigger the black scale layer */
+hover:before:scale-x-100">
+  
+  <span>Send Now</span>
+  
+  <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white ml-3 transform -rotate-45 transition-transform duration-300 group-hover:bg-white/20">
+    <i class="fa-solid fa-arrow-right text-sm"></i>
+  </span>
+
+</button>
+</div>
+        </form>
+    </div>
+
+    <div class="info-container flex flex-col items-start justify-center gap-4">
+      <span class="text-xs font-bold uppercase bg-purple-100 text-purple-700 px-3 py-1 rounded-full mb-4">Contact Us</span>
+      <h2 class="text-4xl md:text-5xl text-gray-900 mb-6 leading-tight">Let’s Connect Empower And Your Business</h2>
+      
+      <div class="call-card group flex items-center gap-4 bg-gray-50 p-6 rounded-xl w-full max-w-md border border-gray-100 hover:bg-[#5038C9]">
+        <div class="icon-box bg-white p-3 rounded-full shadow-sm text-white">
+          <img src="./assets/phone.svg" alt="" srcset="">
+        </div>
+        <div>
+          <p class="text-lg text-gray-400 group-hover:text-white/80">Gives us a Call</p>
+          <p class="text-xl font-bold text-gray-900 group-hover:text-white">123-456-7890</p>
+        </div>
+        
+      </div>
+
+      <div class="call-card group flex items-center gap-4 bg-gray-50 p-6 rounded-xl w-full max-w-md border border-gray-100 hover:bg-[#5038C9] ">
+        <div class="icon-box bg-white p-3 rounded-full shadow-sm text-black">
+          <img src="./assets/mail.svg" alt="" srcset="">
+        </div>
+        <div class="">
+          <p class="text-lg text-gray-400 group-hover:text-white/80 ">Send me Mail</p>
+          <p class="text-xl font-bold text-gray-900 group-hover:text-white">OTech It Service.com</p>
+        </div>
+        
+      </div>
+
+      <div class="call-card group flex items-center gap-4 bg-gray-50 p-6 rounded-xl w-full max-w-md border border-gray-100 hover:bg-[#5038C9]">
+        <div class="icon-box bg-white p-3 rounded-full shadow-sm text-white">
+          <img src="./assets/location.svg"  alt="" srcset="">
+        </div>
+        <div>
+          <p class="text-lg text-gray-400 group-hover:text-white/80">Contact us</p>
+          <p class="text-xl font-bold text-gray-900 group-hover:text-white">8708 Technology, USA</p>
+        </div>
+        
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="map-section w-full px-4 md:px-8 max-w-7xl mx-auto pb-16">
+    <div class="w-full h-[450px] rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.984288665436!2d67.12553357508293!3d24.93260514236748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33900409f01e5%3A0xa1c23c9afaa54399!2sInformation%20Technology%20Services!5e0!3m2!1sen!2s!4v1780295137657!5m2!1sen!2s" 
+      class="w-full h-full border-0" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+      </iframe>
+    </div>
+  </section>
+
+
+</main>
+
+
+
+
 </body>
+
 </html>
