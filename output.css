@@ -1094,6 +1094,7 @@ header{
 
 .right-nav > button {
   float: right;
+  border: 1px solid #fff;
   padding: 0.5rem 1rem;
   background-color: #30149B !important;
   border-radius: 2rem;
@@ -1178,6 +1179,80 @@ header{
   padding: 10rem 2rem 4rem 2rem;
 }
 
+.left-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  color: #fff;
+  position: relative;
+  text-align: left;
+  /* Ensure perfect left alignment */
+}
+
+.left-main > span {
+  margin: 0;
+  font-size: 0.9rem;
+  /* Thoda sleek look ke liye */
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+}
+
+.left-main > h1 {
+  padding-top: 0.5rem;
+  font-size: 4rem;
+  line-height: 4.6rem;
+  font-weight: 700;
+}
+
+.left-main > p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.15rem;
+  line-height: 1.8rem;
+  max-width: 540px;
+  /* Text ko bohot lamba khinchne se bachane ke liye */
+  margin-bottom: 0.5rem;
+}
+
+.stats-section {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  /* Elements ke darmiyan spacing uniform rakhne ke liye */
+}
+
+.stats-section > .stat-item {
+  padding-right: 2.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+  /* Design ke mutabiq heading aur text dono left align hain */
+}
+
+.stat-item > h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 0.3rem;
+}
+
+.stat-item > p {
+  font-size: 0.95rem;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.stats-section > .stat-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
 @media (max-width: 768px) {
   .main {
     grid-template-columns: 1fr;
@@ -1188,8 +1263,8 @@ header{
   }
 
   .left-main > h1 {
-    font-size: 2.2rem;
-    line-height: 2.8rem;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
   }
 
   .left-main > p {
@@ -1198,16 +1273,20 @@ header{
   }
 
   .stats-section {
-    flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
+    justify-content: space-around;
+    /* Mobile par width full karke barabar space dega */
   }
 
   .stats-section > .stat-item {
+    padding-right: 1.5rem;
+  }
+
+  /* Make sure last item has no border on mobile too */
+
+  .stats-section > .stat-item:last-child {
     padding-right: 0;
-    border-right: none;
-    margin-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 1rem;
   }
 
   .right-main {
@@ -1221,72 +1300,14 @@ header{
   }
 }
 
-.left-main {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.5rem;
-  color: #fff;
-  position: relative;
-}
-
 @media (min-width: 992px) {
   .main {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.left-main>span{
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1rem;
-  border-radius: 3rem;
-  background: rgba(255, 255, 255, 0.1);
-  display: inline-block;
-  padding: 0.7rem 0.9rem;
-}
-
-.left-main>h1{
-  padding-top: 1rem;
-  font-size: 4rem;
-  line-height: 4.6rem;
-}
-
-.left-main>p{
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.3rem;
-  line-height: 2rem;
-}
-
 .contact.hero-btn{
   margin-bottom:3rem;
-}
-
-.stats-section{
-  display: flex;
-  justify-content: space-between;
-  width:100%
-}
-
-.stats-section > .stat-item{
-  padding-right: 3rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  margin-right: 3rem;
-  text-align: center;
-}
-
-.stat-item>h2{
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  color:#FFF;
-  text-align:center;
-}
-
-.stat-item>p {
-  font-size: 0.9rem;
-  line-height: 1rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
 }
 
 .right-main {
@@ -1432,7 +1453,7 @@ header{
   /* Elements ko boundary se bahar nikalne se rokega */
 }
 
-.footer-cta-banner-left {
+.banner-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1493,7 +1514,7 @@ header{
   font-weight: 600;
 }
 
-.footer-cta-banner-right {
+.banner-right {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1502,7 +1523,7 @@ header{
   position: relative;
 }
 
-.footer-cta-banner-right img {
+.banner-right img {
   max-height: 320px;
   width: auto;
   max-width: 100%;
@@ -1678,7 +1699,7 @@ header{
     /* Shift handle for tablet stacking */
   }
 
-  .footer-cta-banner-left {
+  .banner-left {
     align-items: center;
     width: 100%;
     padding-bottom: 2rem;
@@ -1690,11 +1711,11 @@ header{
     padding-bottom: 1.5rem;
   }
 
-  .footer-cta-banner-right {
+  .banner-right {
     width: 100%;
   }
 
-  .footer-cta-banner-right img {
+  .banner-right img {
     max-height: 280px;
   }
 
@@ -1766,9 +1787,183 @@ header{
     max-width: 100%;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .main {
+    grid-template-columns: 1fr;
+    padding: 8rem 1rem 4rem 1rem;
+    margin: 0 auto;
+    margin-bottom:3rem;
+    width: 100%;
+  }
+
+  .left-main > h1 {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+  }
+
+  /* Agar screen bohot chhoti ho jaye toh stats ko shrink hone se bachane ke liye safe gap */
+
+  .stats-section {
+    gap: 1rem;
+  }
+
+  .stats-section > .stat-item {
+    padding-right: 1rem;
+  }
+
+  .stat-item > h2 {
+    font-size: 2rem;
+    /* Mobile par headings balance lagengi */
+  }
+
+  .stat-item > p {
+    font-size: 0.85rem;
+  }
+
+  .right-main {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .heroSection, .hero-img, .hero-img img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* ye jo footer mein aik icon hwa mein ur rha he uske liye use kia he  */
+
+/* our service section */
+
+.service-card {
+  background: white;
+  border: none;
+  border-radius: 16px;
+  padding: 36px 28px 32px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  z-index: 0;
+}
+
+/* The fill layer — slides in from right to left on hover */
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #5038C9;
+  transform: translateX(-100%);
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+  border-radius: 16px;
+}
+
+.service-card:hover::before {
+  transform: translateX(0);
+}
+
+/* Text color flip */
+
+.service-card:hover .card-title,
+    .service-card:hover .card-text,
+    .service-card:hover .learn-more {
+  color: #ffffff !important;
+}
+
+/* Icon circle */
+
+.icon-wrap {
+  width: 64px;
+  height: 64px;
+  background: #dcdcee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: background 0.4s ease;
+}
+
+.icon-wrap svg {
+  width: 28px;
+  height: 28px;
+  stroke: #5038C9;
+  fill: none;
+  transition: stroke 0.4s ease;
+}
+
+.service-card:hover .icon-wrap svg {
+  stroke: #ffffff;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  transition: color 0.4s ease;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #5F6168;
+  line-height: 1.6;
+  transition: color 0.4s ease;
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #111112;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.learn-more svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+}
+
+a{
+  color:white;
+  text-decoration: none;
+}
+
+.service-subtitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #5038C9;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background: rgba(80, 56, 201, 0.1);
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  display: inline-block;
+}
+
+.service-main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.3;
+}
+
+/* Responsive heading adjustment for smaller screens */
+
+@media (max-width: 768px) {
+  .service-main-title {
+    font-size: 2rem;
+  }
+}
 
 .before\:absolute::before {
   content: var(--tw-content);
