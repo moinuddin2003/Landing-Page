@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Otech</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="output.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+<style>
+    body {
+    font-family: "Figtree", sans-serif;
+      /* padding: 60px 20px; */
+    }
+ 
+    .service-card {
+      background: #ededf5;
+      border: none;
+      border-radius: 16px;
+      padding: 36px 28px 32px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: color 0.4s ease;
+      z-index: 0;
+    }
+ 
+    /* The fill layer — slides in from right to left on hover */
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: #5038C9;
+      transform: translateX(-100%);
+      transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+      z-index: -1;
+      border-radius: 16px;
+    }
+ 
+    .service-card:hover::before {
+      transform: translateX(0);
+    }
+ 
+    /* Text color flip */
+    .service-card:hover .card-title,
+    .service-card:hover .card-text,
+    .service-card:hover .learn-more {
+      color: #ffffff !important;
+    }
+ 
+    /* Icon circle */
+    .icon-wrap {
+      width: 64px;
+      height: 64px;
+      background: #dcdcee;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      transition: background 0.4s ease;
+    }
+ 
+    .icon-wrap svg {
+      width: 28px;
+      height: 28px;
+      stroke: #5038C9;
+      fill: none;
+      transition: stroke 0.4s ease;
+    }
+ 
+    .service-card:hover .icon-wrap svg {
+      stroke: #ffffff;
+    }
+ 
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 12px;
+      transition: color 0.4s ease;
+    }
+ 
+    .card-text {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #5F6168;
+      line-height: 1.6;
+      transition: color 0.4s ease;
+    }
+ 
+    .learn-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #111112;
+      margin-top: 20px;
+      text-decoration: none;
+      transition: color 0.4s ease;
+    }
+ 
+    .learn-more svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+    }
+    a{
+        color:white;
+        text-decoration: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="home-hero-wrapper">
+    <header>
+      <nav class="navbar">
+        <div class="left-nav">
+          <img src="./assets/vl-logo.webp" alt="" srcset="" />
+        </div>
+        <div class="sections-nav">
+          <ul>
+            <li>Home<i class="fa-solid fa-angle-down"></i></li>
+            <li>About Us</li>
+            <li>Services<i class="fa-solid fa-angle-down"></i></li>
+            <li>Pages<i class="fa-solid fa-angle-down"></i></li>
+            <li>Case Studies<i class="fa-solid fa-angle-down"></i></li>
+            <li>Blog<i class="fa-solid fa-angle-down"></i></li>
+          </ul>
+        </div>
+        <div class="right-nav">
+          <a href="contact.html" class="contact">GET STARTED <span><i class="fa-solid fa-arrow-right"></i></span></a>
+
+          <button type="button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <section
+      class="section1 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 m-4 pt-40 pr-8 pl-8 pb-16 relative overflow-hidden">
+      <div class="left-side flex flex-col items-start justify-center">
+        <h1 class="text-white text-6xl font-semibold">Our Service</h1>
+        <div class="list text-white text-lg">
+          <span><a href="index.html" >Home</a></span>
+          <span>
+            <i class="fa-solid fa-angle-right"></i>
+          </span>
+          <span class="active"><a href="#">Our Service</a></span>
+        </div>
+      </div>
+      <div class="right-side relative w-full max-w-md h-40 ml-auto">
+        <div class="shapes">
+          <div class="shape3 -left-24">
+            <img src="./assets/emoji-4.3.svg" alt="" srcset="">
+          </div>
+          <div class="shape2 !-right-16">
+            <img src="./assets/emoji-4.2.svg" alt="" srcset="">
+          </div>
+        </div>
+        <div class="fan absolute inset-0 flex items-center justify-center z-0">
+          <img src="./assets/fan.svg" class="" alt="" srcset="">
+        </div>
+        <div class="hero relative bottom-24 z-10 w-[280px] md:w-[400px] ml-auto">
+          <img src="./assets/img1.webp" alt="" srcset="">
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <main>
+
+<div class="container py-5">
+  <div class="row g-4 ">
+ 
+    <!-- Card 1 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-card h-100">
+        <div class="icon-wrap">
+          <img src="./assets/ser-1.svg" alt="" srcset="">
+        </div>
+        <h5 class="card-title">Cloud Computing Solutions</h5>
+        <p class="card-text">Leverage the power cloud to enhance <br>
+scalability, flexibility, and performance <br>
+Our cloud computing solutions secure.</p>
+        <a href="#" class="learn-more">
+          Learn More
+          <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+ 
+    <!-- Card 2 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-card h-100">
+        <div class="icon-wrap">
+          <img src="./assets/ser-2.svg" alt="" srcset="">
+        </div>
+        <h5 class="card-title">IT Infrastructure Management</h5>
+        <p class="card-text">Optimize your business operations with <br>
+reliable IT infrastructure management <br>
+From network setup to hardware.</p>
+        <a href="#" class="learn-more">
+          Learn More
+          <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+ 
+    <!-- Card 3 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-card h-100">
+        <div class="icon-wrap">
+          <img src="./assets/ser-3.svg" alt="" srcset="">
+        </div>
+        <h5 class="card-title">Cybersecurity Services</h5>
+        <p class="card-text">In today's digital world, protecting your <br> data is more critical than ever. Our best <br> comprehensive cybersecurity services.</p>
+        <a href="#" class="learn-more">
+          Learn More
+          <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+ 
+    <!-- Card 4 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-card h-100">
+        <div class="icon-wrap">
+            <img src="./assets/ser-4.svg" alt="" srcset="">
+        </div>
+        <h5 class="card-title">IT Consulting & Strategy</h5>
+        <p class="card-text">Achieve your business goal with expert<br>
+IT consulting and strategy services Our<br>
+consultants work with you to identify.</p>
+        <a href="#" class="learn-more">
+          Learn More
+          <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+ 
+    <!-- Card 5 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-card h-100">
+        <div class="icon-wrap">
+            <img src="./assets/ser-5.svg" alt="" srcset="">
+        </div>
+        <h5 class="card-title">Managed IT Services</h5>
+        <p class="card-text">Focus on your core business while we<br>
+manage your IT operation our managed<br>
+services include 24/7 monitoring.</p>
+        <a href="#" class="learn-more">
+          Learn More
+          <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+ 
+    <!-- Card 6 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-card h-100">
+        <div class="icon-wrap">
+            <img src="./assets/ser-6.svg" alt="" srcset="">
+        </div>
+        <h5 class="card-title">Network Design & Security</h5>
+        <p class="card-text">Create a robust and secure network<br>
+infrastructure with our design security<br>
+services we develop networks that.</p>
+        <a href="#" class="learn-more">
+          Learn More
+          <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+ 
+    <!-- Card 7 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-card h-100">
+        <div class="icon-wrap">
+                    <img src="./assets/ser-1.svg" alt="" srcset="">
+
+        </div>
+        <h5 class="card-title">Cloud Solutions</h5>
+        <p class="card-text">Leverage the power of the cloud to<br>
+streamline your operations and boost<br>
+scalability our cloud solutions offer.</p>
+        <a href="#" class="learn-more">
+          Learn More
+          <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+ 
+    <!-- Card 8 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-card h-100">
+        <div class="icon-wrap">
+                    <img src="./assets/ser-2.svg" alt="" srcset="">
+
+        </div>
+        <h5 class="card-title">Cybersecurity Services</h5>
+        <p class="card-text">Protect your business from evolving<br>
+cyber threats with our comprehensive<br>
+cybersecurity solutions From threat.</p>
+        <a href="#" class="learn-more">
+          Learn More
+          <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+ 
+    <!-- Card 9 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-card h-100">
+        <div class="icon-wrap">
+                   <img src="./assets/ser-3.svg" alt="" srcset="">
+
+        </div>
+        <h5 class="card-title">Software Development</h5>
+        <p class="card-text">Transform your ideas into reality with<br>
+our custom software development<br>
+services whether you need mobile.</p>
+        <a href="#" class="learn-more">
+          Learn More
+          <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+ 
+  </div>
+</div>
+ 
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+
+<section class="py-5 px-3 px-lg-5 w-full" style="background-color: #F4F5F8;">
+  <div class="container-fluid px-2 px-md-4">
+
+    <span class="d-inline-block px-4 py-2 rounded-pill font-semibold uppercase mb-3" style="background-color: #EBE9F4; color: #5038C9; font-weight: 600;">
+      Why Choose Us
+    </span>
+
+    <h2 class="mt-3 text-dark fw-semibold lh-base" style="font-size: calc(1.375rem + 1.5vw); max-width: 850px;">
+      We Don’t Just Deliver Solutions <br> We Build Partnerships
+    </h2>
+
+    <div class="position-relative" style="margin-top: 48px; padding-bottom: 80px;">
+      
+      <div class="row g-4 align-items-start">
+
+        <div class="col-12 col-md-6 col-lg-5">
+          <img src="./assets/about-4.webp" alt="" class="img-fluid w-100 rounded-4 object-fit-cover" style="height: 520px;">
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 d-none d-md-block">
+          <img src="./assets/about-5.webp" alt="" class="img-fluid w-100 rounded-4 object-fit-cover" style="height: 405px;">
+        </div>
+
+        <div class="col-12 col-lg-4 pt-2">
+          <p class="text-muted fs-5 lh-lg mb-4" style="color: #5F6168 !important;">
+            We understand that every business is unique, is why we offer customized IT solutions that fit your needs perfectly. Our approach rooted in collaboration and innovation, ensuring you receive the best tools and strategies.
+          </p>
+
+          <button class="group relative inline-flex items-center rounded-full bg-[#5038C9] py-2 pl-8 pr-2 text-white font-bold uppercase overflow-hidden z-10 btn-custom-hover"
+                  style="background-color: #5038C9; border: none; color: white; padding: 10px 12px 10px 32px; border-radius: 50rem; font-weight: 700;">
+            <span>Learn More</span>
+            <span class="ms-3 d-flex items-center justify-center rounded-circle" style="width: 48px; height: 48px; background-color: rgba(255, 255, 255, 0.1);">
+              <i class="fa-solid fa-arrow-right" style="transform: rotate(-45deg);"></i>
+            </span>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="stats-card-box bg-white rounded-4 shadow-sm p-4 position-absolute" 
+           style="z-index: 10; width: 100%; max-width: 750px; left: 70%; transform: translateX(-50%); bottom: 68px;">
+        
+        <div class="row g-0 text-center align-items-center">
+          
+          <div class="col-6 col-md-3 py-3 border-end">
+            <h3 class="fw-bold text-dark display-6 m-0">90k</h3>
+            <p class="text-muted fw-medium small mb-0">Happy Client</p>
+          </div>
+
+          <div class="col-6 col-md-3 py-3 border-end">
+            <h3 class="fw-bold text-dark display-6 m-0">650+</h3>
+            <p class="text-muted fw-medium small mb-0">Total Projects</p>
+          </div>
+
+          <div class="col-6 col-md-3 py-3 border-end-md">
+            <h3 class="fw-bold text-dark display-6 m-0">85+</h3>
+            <p class="text-muted fw-medium small mb-0">Work Together</p>
+          </div>
+
+          <div class="col-6 col-md-3 py-3">
+            <h3 class="fw-bold text-dark display-6 m-0">12+</h3>
+            <p class="text-muted fw-medium small mb-0">Years of Experience</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @media (max-width: 991px) {
+    .stats-card-box {
+      position: relative !important;
+      left: 0 !important;
+      transform: none !important;
+      bottom: 0 !important;
+      margin-top: 40px;
+    }
+  }
+  @media (min-width: 768px) {
+    .border-end-md {
+      border-right: 1px solid #dee2e6 !important;
+    }
+  }
+</style>
+
+
+</main>
+
+
+
+
+<section class="last-section">
+
+  <div class="footer-cta-banner-left">
+    <div class="cta-text">
+      <h2>Transform Your Business <br> Contact Us Today</h2>
+    </div>
+    <div class="cta-form">
+      <input type="email" name="email" id="" placeholder="Email Address">
+      <div class="subscribeBtn">
+      <button type="submit" class="contact hero-btn subscribe"
+          >SUBSCRIBE NOW
+          <span><i class="fa-solid fa-arrow-right"></i></span
+        ></button></div>
+    </div>
+  </div>
+
+  <div class="footer-cta-banner-right">
+    <div class="shapes">
+      <div class="shape3 sh">
+      <img src="./assets/emoji-4.3.svg">
+      </div>
+    </div>
+    
+    <img src="./assets/black-person-i,g.webp" alt="" srcset="">
+    </div>
+</section>
+
+  <footer class="site-footer">
+    
+    <div class="footer-col brand-col">
+    <div class="footer-logo">
+      <img src="./assets/vl-logo-1.webp" alt="" srcset="">
+    </div>
+      <p>We foster a culture of teamwork &
+      creative problem-solving to deliver
+      exceptional results for our clients.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col links-col">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Service</a></li>
+      <li><a href="#">Case Study</a></li>
+      <li><a href="#">Testimonial</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col links-col">
+    <h3>Our Service</h3>
+    <ul>
+      <li><a href="#">Cyber Security</a></li>
+      <li><a href="#">Network Analysis</a></li>
+      <li><a href="#">Data Recovery</a></li>
+      <li><a href="#">It Service</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col insta-col">
+    <h3>Instagram Post</h3>
+    <div class="insta-grid">
+      <div class="insta-item"><img src="./assets/ins-1.webp" alt="Post 1"></div>
+      <div class="insta-item"><img src="./assets/ins-2.webp" alt="Post 2"></div>
+      <div class="insta-item"><img src="./assets/ins-3.webp" alt="Post 3"></div>
+      <div class="insta-item"><img src="./assets/ins-4.webp" alt="Post 4"></div>
+      <div class="insta-item"><img src="./assets/ins-5.webp" alt="Post 5"></div>
+      <div class="insta-item"><img src="./assets/ins-6.webp" alt="Post 6"></div>
+    </div>
+  </div>
+</footer>
+
+
+<footer class="bottom-footer">
+  <div class="bottom-footer-container">
+    <p>Copyright ©2024 O-Tech. All Rights Reserved</p>
+    <span>Terms & Conditions  |  Privacy Policy</span>
+  </div>
+</footer>
+</body>
+</html>
+
+
+
+
+

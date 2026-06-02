@@ -1094,10 +1094,9 @@ header{
 
 .right-nav > button {
   float: right;
-  border: 1px solid #fff;
   padding: 0.5rem 1rem;
   background-color: #30149B !important;
-  border-radius: 8px;
+  border-radius: 2rem;
   color: #fff;
 }
 
