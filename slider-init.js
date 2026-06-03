@@ -87,6 +87,36 @@ $('.testimonial-s').slick({
     ]
 });
 
+
+});
+
+const missionCards = [
+  {
+    title: "Our Mission",
+    text: "Our mission is to empower businesses through innovative IT solutions that drive growth, efficiency and digital transformation."
+  },
+  {
+    title: "Our Vision",
+    text: "Our vision is to become the most trusted technology partner for businesses worldwide."
+  },
+  {
+    title: "Our Values",
+    text: "We believe in integrity, innovation, and excellence. Our core values guide every decision we make."
+  }
+];
+
+let missionIndex = 0;
+
+$('#missionNext').click(function() {
+  missionIndex = (missionIndex + 1) % missionCards.length;
+  $('#missionTitle').text(missionCards[missionIndex].title);
+  $('#missionText').text(missionCards[missionIndex].text);
+});
+
+$('#missionPrev').click(function() {
+  missionIndex = (missionIndex - 1 + missionCards.length) % missionCards.length;
+  $('#missionTitle').text(missionCards[missionIndex].title);
+  $('#missionText').text(missionCards[missionIndex].text);
 });
 
 //USed in index case studies slider

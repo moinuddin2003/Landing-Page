@@ -1399,7 +1399,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    flex-shrink: 0; /* ← squeeze mat hone do */
+    flex-shrink: 0; 
 }
 
 .testi-prev, .testi-next {
@@ -1421,14 +1421,24 @@ header{
     .testimonial {
         flex-direction: column;
         padding: 2rem;
+        overflow: hidden; /* ← mobile pe hidden wapas */
     }
+    
+    .testimonialLeft {
+        flex: none;
+        width: 100%;
+    }
+    
+    .testimonialRight {
+        width: 100%;
+    }
+}
 
-    .testi-arrows {
-        position: static;
+
+@media (max-width: 768px) {
+
+    .testi-arrows{
         flex-direction: row;
-        transform: none;
-        margin-top: 1rem;
-        justify-content: center;
     }
 }
 
