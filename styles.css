@@ -181,6 +181,9 @@ header{
     grid-template-columns: 1fr; 
     align-items: center; 
     margin-bottom:3rem;
+    max-width: 1250px;
+    margin-right:auto;
+    margin-left: auto;
     padding: 10rem 2rem 4rem 2rem; 
 }
 
@@ -293,7 +296,7 @@ header{
     }
     
     .heroSection, .hero-img, .hero-img img {
-        width: 100%;
+        /* width: 100%; */
         max-width: 100%;
     }
 }
@@ -980,46 +983,48 @@ header{
 }
 
 .leftchooseUs{
-    flex:1;
-    position:relative;
-    /* padding:3rem */
+     display: flex;
+    align-items: center;
+    position: relative;
+    /* padding: 3rem; */
+    width: 50%;
+    justify-content: center;
 }
 
-.leftchooseUsMainImage{
-    margin-left: 8rem;
-
-}
 .leftchooseUsMainImage > img{
     border-radius: 8px;
     height:500px;
-    width:400px;
-
+    width:auto;
     object-fit: cover;
 
 }
 .leftchooseUsSubImage{
     position:absolute;
-    top:5%;
-    left:-2%;
-    width:45%;
+    bottom: 220px;
+    left:0
+   
 }
 
-.experienceBadge{
+.experienceBadge {
     position: absolute;
-    bottom:-20%;
-    right:3%;
-    width:35%;  
-
+    bottom: 0;
+    right: 0;
+    width: auto;
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    top: 100%;
 }
 
 
-.experienceBadge>span{
-    position:absolute;
+.experienceBadge>div{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+  position: absolute;
     color:white;
     font-weight:bold;
 }
@@ -1082,52 +1087,46 @@ header{
     color: #555;
 }
 
-@media (max-width: 1024px){
-    .leftchooseUsSubImage{
-        display:none
-    }
-
-    .experienceBadge{
-        display:none
-    }
+@media (max-width: 1024px) {
+  .chooseUs { padding: 3rem 2rem; }
+  .leftchooseUsSubImage { display: none; } /* keep hidden on tablet */
+  .leftchooseUsMainImage { margin-left: 2rem; }
+  .leftchooseUsMainImage > img { width: 300px; height: 380px; }
+  .experienceBadge { width: 50%; }
 }
 
 @media (max-width: 768px) {
-    .chooseUs {
-        flex-direction: column;
-        padding: 2rem;
-    }
+  .chooseUs { flex-direction: column; padding: 2rem 1.5rem; }
 
-    .leftchooseUs {
-        width: 100%;
-        min-height: 400px; /* badge ke liye jagah */
-    }
+  .leftchooseUs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .leftchooseUsMainImage {
-        margin-left: 3rem;
-    }
+  /* Hide sub-image WITHOUT display:none */
+  .leftchooseUsSubImage {
+    position: absolute;
+    width: 0; height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
 
-    .leftchooseUsMainImage > img {
-        width: 280px;
-        height: 350px;
-    }
+  .leftchooseUsMainImage { margin-left: 0; }
+  .leftchooseUsMainImage > img { width: 280px; height: 340px; }
 
-    .leftchooseUsSubImage{
-        display:none
-    }
+  /* Badge flows centered below main image */
+  .experienceBadge {
+   position: static !important;
+    width: 40%;
+    height: auto;
+    align-self: center;
+  }
 
-    .experienceBadge {
-        display:none;
-    }
-
-    .rightchooseUs {
-        width: 100%;
-        padding: 3rem 0 0 0;
-    }
-
-    .subChooseUs {
-        flex-direction: column;
-    }
+  .rightchooseUs { width: 100%; padding: 1.5rem 0 0 0; }
+  .subChooseUs { flex-direction: column; }
 }
 
 @media (max-width: 480px) {
@@ -1141,8 +1140,19 @@ header{
     }
 
     .experienceBadge {
-        width: 50%;
+        width: 300px;
+        height:auto;
     }
+
+    .experienceBadge span:first-of-type{
+    font-size:2rem;
+    /* top:28% */
+}
+
+.experienceBadge span:last-of-type{
+    font-size:1rem;
+    /* bottom:35% */
+}
 }
 
 
@@ -1170,6 +1180,9 @@ header{
 /* Slider */
 .case-slider {
     width: 100%;
+    max-width: 1250px;
+    margin-right:auto;
+    margin-left: auto;
     overflow: hidden;
 }
 
@@ -1402,6 +1415,46 @@ header{
     flex-shrink: 0; 
 }
 
+.testimonial-slider .slick-dots {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 0 !important;
+  list-style: none !important;
+  bottom: -48px !important;
+}
+
+.testimonial-slider .slick-dots li {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 !important;
+}
+
+.testimonial-slider .slick-dots li button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background: #C5BCEE !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.testimonial-slider .slick-dots li button:before {
+  display: none !important;
+}
+
+.testimonial-slider .slick-dots li.slick-active button {
+  width: 14px !important;
+  height: 14px !important;
+  background: transparent !important;
+  border: 2px solid #5038C9 !important;
+}
+
+
 .testi-prev, .testi-next {
     background: rgba(255,255,255,0.15);
     border: none;
@@ -1444,158 +1497,190 @@ header{
 
 
 .pricing {
-    padding: 4rem 6rem;
-    text-align: center;
+  padding: 4rem 6rem;
+  text-align: center;
 }
 
 .pricingHeader span {
-    background: #f0eeff;
-    color: #6c5ce7;
-    padding: 0.4rem 1.2rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: bold;
+  background: #f0eeff;
+  color: #6c5ce7;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 
 .pricingHeader h2 {
-    font-size: 2.2rem;
-    margin: 1rem 0 2.5rem 0;
-    color: #111;
-    line-height: 1.3;
+  font-size: 2.2rem;
+  margin: 1rem 0 2.5rem 0; 
+  color: #111;
+  line-height: 1.3;
 }
 
 .pricingCards {
-    display: flex;
-    gap: 1.5rem;
-    align-items: stretch;
-    justify-content: center;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-end;
+  justify-content: center;
 }
 
-/* Base card */
 .pricingCard {
-    flex: 1;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background: white;
+  flex: 1;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  position: relative;
+  padding-top: 70px;
 }
 
-/* Top purple box */
 .pricingTop {
-    background: linear-gradient(135deg, #2E0797, #5b3de8);
-    padding: 1.5rem 2rem;
-    text-align: left;
-    color: white;
-    border-radius: 10px;
-    margin: -1px;
+  position: absolute;
+  top: -48px;
+  left: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, #3a1daa, #5b3de8);
+  padding: 1.2rem 1.8rem;
+  border-radius: 12px;
+  text-align: left;
+  color: white;
+  box-shadow: 0 8px 24px rgba(46, 7, 151, 0.25);
 }
 
 .pricingTop h4 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1rem;
-    font-weight: 600;
+  margin: 0 0 0.3rem 0;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .pricingTop h2 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: white;
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: white;
 }
 
 .pricingTop h2 span {
-    font-size: 1rem;
-    font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-/* Body */
 .pricingBody {
-    padding: 2rem;
-    text-align: left;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  padding: 1.5rem 2rem 2rem;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .pricingBody > p {
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .pricingBody hr {
-    border: none;
-    border-top: 1px solid #eee;
-    margin-bottom: 1.2rem;
+  border: none;
+  border-top: 1px solid #eee;
+  margin-bottom: 1.2rem;
 }
 
 .pricingBody ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
 }
 
 .pricingBody ul li {
-    font-size: 0.95rem;
-    color: #333;
-    margin-bottom: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .pricingBody ul li i {
-    color: #2E0797;
-    font-size: 1.1rem;
+  color: #2e0797;
+  font-size: 1.1rem;
 }
 
-/* Featured card — middle */
+/* === FEATURED CARD === */
 .pricingFeatured {
-    background: linear-gradient(160deg, #2E0797, #5b3de8);
-    border: none;
-    transform: scaleY(1.03);
-    z-index: 1;
+  background: linear-gradient(160deg, #2e0797, #5b3de8);
+  border: none;
+  margin-top: -40px;
+  padding-top: 110px;
+  border-radius: 16px;
+}
+
+.pricingFeatured .pricingTop {
+  top: -60px;
+  background: linear-gradient(135deg, #3a22bb, #6a4ef5);
 }
 
 .pricingFeatured .pricingBody > p {
-    color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .pricingFeatured .pricingBody hr {
-    border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .pricingFeatured .pricingBody ul li {
-    color: white;
+  color: white;
 }
 
 .pricingFeatured .pricingBody ul li i {
-    color: white;
+  color: white;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .pricing {
-        padding: 2rem 1.5rem;
-    }
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .pricing { padding: 3rem 2rem; }
 
-    .pricingCards {
-        flex-direction: column;
-    }
-
-    .pricingFeatured {
-        transform: none;
-    }
+}
+ 
+@media(min-width:769px){
 
     .pricingHeader h2 {
-        font-size: 1.5rem;
-    }
+      margin: 1rem 0 10rem 0; 
+}
 }
 
+@media (max-width: 768px) {
+  .pricing { padding: 2rem 1.5rem; }
+
+  .pricingCards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pricingCard {
+    padding-top: 80px;
+    margin-top: 60px;
+  }
+
+  .pricingFeatured {
+    margin-top: 60px;
+    padding-top: 80px;
+  }
+
+  .pricingTop,
+  .pricingFeatured .pricingTop {
+    top: -52px;
+  }
+
+  .pricingHeader h2 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .pricing { padding: 2rem 1rem; }   
+  .pricingTop h2 { font-size: 2rem; }
+}
 
 .blog {
     padding: 4rem 6rem;
