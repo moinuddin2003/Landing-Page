@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -266,6 +267,12 @@ hover:before:scale-x-100">
     <span>Terms & Conditions  |  Privacy Policy</span>
   </div>
 </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>  
 
 </body>
 

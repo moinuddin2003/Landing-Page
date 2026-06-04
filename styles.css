@@ -17,6 +17,30 @@ html, body {
 	line-height: 26px;
 }
 
+.navbar.scrolled {
+    /* background-color: #3F1AB4; */
+    background-color: #050C36;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    padding:1rem 2rem;
+    -webkit-animation: 0.7s ease-in-out 0s normal none 1 running vlfadeInDown;
+    animation: 0.7s ease-in-out 0s normal none 1 running vlfadeInDown;
+    border-radius: unset;
+    /* opacity: 0.8; */
+    margin:0
+}
+
+@keyframes vlfadeInDown {
+    0% {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
 
 
 .home-hero-wrapper{
@@ -42,6 +66,8 @@ header{
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.1);
     padding:1rem 2rem;
+
+    /* transition: background-color 0.3s ease, box-shadow 0.3s ease; */
     margin: 1rem 2rem;
 }
 

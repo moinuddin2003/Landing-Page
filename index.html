@@ -54,6 +54,7 @@
       <header>
         <nav class="navbar">
           <div class="left-nav">
+            
             <img src="./assets/vl-logo.webp" alt="" srcset="" />
           </div>
           <div class="sections-nav">
@@ -1043,5 +1044,12 @@
         <span>Terms & Conditions | Privacy Policy</span>
       </div>
     </footer>
+
+  <script>
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>  
+    
   </body>
 </html>

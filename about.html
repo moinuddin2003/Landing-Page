@@ -23,6 +23,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -928,6 +929,13 @@
       <span>Terms & Conditions | Privacy Policy</span>
     </div>
   </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>  
+
 </body>
 
 </html>
